@@ -127,6 +127,18 @@ To access the server responses use either the standard names `responseText`,
 * this.json -> this.responseJSON
 
 
+## Retrieving the HTTP-Statuscode
+
+If you need to handle specific status codes separately you can retrieve them from the server response like so:
+
+    Xhr.load('/some/url', {
+      onSuccess: function(request) {
+        var statuscode = request.status;
+
+        // ....
+      }
+    });
+
 ### .Options
 
     Xhr.Options -> Object
